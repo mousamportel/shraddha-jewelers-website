@@ -280,3 +280,108 @@
             </div>
         </div>
     </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <div class="contact-card" onmouseover="animateCard(this)" onmouseout="resetCard(this)">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h3>Visit Us</h3>
+                            <p>Old Bhadrapur Road</p>
+                            <p>Birtamod, Jhapa District</p>
+                            <p>Nepal</p>
+                        </div>
+                    </div>
+                    <div class="contact-card" onmouseover="animateCard(this)" onmouseout="resetCard(this)">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+9779804913844" class="phone-link">+977 980-4913844</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card" onmouseover="animateCard(this)" onmouseout="resetCard(this)">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <h3>Business Hours</h3>
+                            <p>Sunday - Friday: 10:00 AM - 7:00 PM</p>
+                            <p>Saturday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .contact {
+                padding: 100px 0;
+                background: linear-gradient(to bottom, var(--light), var(--gray));
+            }
+
+            .contact-details {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 50px;
+            }
+
+            .contact-card {
+                background: var(--light);
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+
+            .contact-card i {
+                font-size: 2.5em;
+                color: var(--primary);
+                margin-bottom: 20px;
+            }
+
+            .contact-card h3 {
+                color: var(--dark);
+                margin-bottom: 15px;
+                font-size: 1.5em;
+            }
+
+            .contact-text p {
+                color: #666;
+                margin: 5px 0;
+            }
+
+            .phone-link {
+                color: var(--primary);
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .phone-link:hover {
+                color: var(--secondary);
+            }
+
+            @media (max-width: 768px) {
+                .contact-details {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <script>
+            function animateCard(card) {
+                card.style.transform = 'translateY(-10px)';
+                card.style.boxShadow = '0 15px 40px rgba(0,0,0,0.15)';
+            }
+
+            function resetCard(card) {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+            }
+        </script>
+    </section>
